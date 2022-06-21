@@ -1,8 +1,6 @@
 package proyecto;
 
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-
 public class RegistrodeUsuarios {
   public void Registro(){
        byte opcion=0;
