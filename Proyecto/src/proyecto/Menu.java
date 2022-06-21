@@ -1,15 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyecto;
 import javax.swing.JOptionPane;
 public class Menu {
-    public void Menu(){
-     
+    public void Menu(){   
    byte opcion=0;
-
-
    do{
       opcion=Byte.parseByte(JOptionPane.showInputDialog(
      "          Menú Principal  \n"
@@ -41,12 +34,8 @@ public class Menu {
             break;
          default:
             JOptionPane.showMessageDialog(null, "Opción no valida");
-            break;
-            
+            break;  
       }
-      
    }while(opcion!=5);   
-   System.exit(0);
-   
    }
 }
