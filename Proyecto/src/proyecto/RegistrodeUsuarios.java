@@ -12,7 +12,7 @@ public class RegistrodeUsuarios {
     + "1    Registrar un Usuario\n"
     + "2    Ver usuarios\n"
     + "3    Inactivar usuarios\n"
-    + "4    Regresar al menu principal(Para salir)\n"
+    + "4    Regresar al menu principal\n"
     + "Elija una opción"));
       switch(opcion){
          case 1:
@@ -20,7 +20,8 @@ public class RegistrodeUsuarios {
             usuario01.datosUsuario();
             break;
          case 2:
-             JOptionPane.showMessageDialog(null, "Aqui va Ver Usuarios");;
+            RegistrodeUsuarios usuario02=new RegistrodeUsuarios();
+             usuario02.verUsuario();
             break;
          case 3:
              JOptionPane.showMessageDialog(null, "Aqui va Inactivar usuarios");;
@@ -34,16 +35,46 @@ public class RegistrodeUsuarios {
       }
    }while(opcion!=4); 
     }
+//datos
     private String nombre;
     private String apellidos;
     private String nickname;
     private String contraseña;
+    public RegistrodeUsuarios(){
+    this.nombre="";
+    this.apellidos="";
+    this.nickname="";
+    this.contraseña="";
+    } 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    public void setnickname(String nickname) {
+        this.nickname = nickname;
+    }   
+    public void setcontraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }          
+//sistema de registro de usuarios   
   public void datosUsuario(){
         nombre=JOptionPane.showInputDialog(null, "Digite su nombre: ");
         apellidos=JOptionPane.showInputDialog(null, "Digite su apellidos: ");
-        nickname=JOptionPane.showInputDialog(null, "Digite un nickname: ");
+        contraseña=JOptionPane.showInputDialog(null, "Digite un nickname: ");
         nickname=JOptionPane.showInputDialog(null, "Digite su contraseña: ");
-        JOptionPane.showMessageDialog(null, "Usuario registrado");
+        JOptionPane.showMessageDialog(null, "El Usuario de "+nombre+" "+ apellidos
+                +" ha sido registrado bajo el nombre de usuario:"+nickname);
     }
-  
+//sistema de vista de usuarios
+   public void verUsuario(){
+       JOptionPane.showMessageDialog(null, "Pronto el sistema para ver los usuarios registrados ");
+    }
+   
+ //sistema de inactivar usuarios 
+   public void inactivarUsuarios(){
+       JOptionPane.showMessageDialog(null, "Pronto el sistema de inactivar usuarios:");
+    }  
+   
 }
