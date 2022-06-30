@@ -2,16 +2,16 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 public class RegistrodeUsuarios {
-    //datos
+    //variables
     private String nombre;
     private String apellidos;
     private String nickname;
     private String contraseña;
     public RegistrodeUsuarios(){
-    this.nombre="";
-    this.apellidos="";
-    this.nickname="";
-    this.contraseña="";
+        this.nombre="";
+        this.apellidos="";
+        this.nickname="";
+        this.contraseña="";
     } 
     public String getNombre() {
         return nombre;
@@ -37,7 +37,7 @@ public class RegistrodeUsuarios {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-  public void Registro(){
+  public void menuUsuarios(){
        byte opcion=0;
    do{
       opcion=Byte.parseByte(JOptionPane.showInputDialog(
@@ -59,7 +59,7 @@ public class RegistrodeUsuarios {
             break;
          case 2: 
              //sistema de vista de usuarios
-            JOptionPane.showMessageDialog(null, "Nombre: "+nombre+"Apellidos: "+ apellidos
+            JOptionPane.showMessageDialog(null, "Nombre: "+nombre+" Apellidos: "+ apellidos
                 +" nombre de usuario: "+nickname);
             break;
          case 3:

@@ -15,7 +15,7 @@ public class Menu {
       switch(opcion){
          case 1:
             RegistrodeUsuarios registro01=new RegistrodeUsuarios();
-            registro01.Registro();
+            registro01.menuUsuarios();
             break;
          case 2:
             Catalogo catalog01=new Catalogo();
